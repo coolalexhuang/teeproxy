@@ -175,7 +175,7 @@ func DuplicateRequest(request *http.Request) (request1 *http.Request, request2 *
 		Body:          nopCloser{b1},
 		Host:          request.Host,
 		ContentLength: request.ContentLength,
-		Close:         true,
+	//	Close:         true,
 	}
 	request2 = &http.Request{
 		Method:        request.Method,
@@ -187,7 +187,7 @@ func DuplicateRequest(request *http.Request) (request1 *http.Request, request2 *
 		Body:          nopCloser{b2},
 		Host:          request.Host,
 		ContentLength: request.ContentLength,
-		Close:         true,
+	//	Close:         true,
 	}
 	return
 }
